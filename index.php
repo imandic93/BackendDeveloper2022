@@ -4,38 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Uvod u PHP</title>
 </head>
 <body>
 <pre>
 <?php
 
-$a = 2;
-$b = 2;
-$c = "hello";
-$d = "world";
+$names = ['Ivan', 'Tony', 'Josip', 'Kristijan', 'Igor'];
 
-echo $a + $b . "<br>";
-echo $a - $b . "<br>";
-echo $a / $b . "<br>";
-echo $a % $b . "<br>";
-echo $a * $b . "<br>"; 
-
-$f= $c . " " . $d;
-echo $f;
-
-echo "<br>";
-
-echo ($a-=1)."<br>";
-echo ($b+=2)."<br>";
-
-$rez = $a < $b;
-var_dump($rez);
-
-echo ++$a;
-echo "<br>";
-echo $a--, '<br />';
-
+foreach($names as $key => $name){
+    echo "Ključ: $key, Ime: $name <br>" ;
+} 
+  
 ?>
 </pre>
 </body>
