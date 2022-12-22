@@ -1,12 +1,11 @@
 <?php
 
-function getNameAndSurnameAddedTogether($name, $surname)
-{
-    $nameAndSurname = $name . ' ' . $surname;
-    $nameAndSurname = mb_strtoupper($nameAndSurname);
+$knjigeJson = file_get_contents('knjige.json');
+$knjige = json_decode($knjigeJson, true);
 
-    return $nameAndSurname;
-}
+$knjige[0]['title'] = 'Foo';
+$knjige[] = [
+    'foo' => 'bar'
+];
 
-$text = getNameAndSurnameAddedTogether('Ivan', 'Mandić');
-echo "$text\n";
+file_put_contents('knjige.json', json_encode($knjige));
