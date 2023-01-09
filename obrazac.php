@@ -1,22 +1,9 @@
-<table border="double">
-        <tr>
-            <td>Ime:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Prezime:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Email:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Lozinka:</td>
-            <td><input type="password"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Posalji!"></td>
-        </tr>
-
-</table> 
+<form action="obrada.php" method="post">
+    <label>Ime</label>
+    <input type="text" name="ime">
+    <br><br>
+    <label>Prezime</label>
+    <input type="text" name="prezime">
+    <br><br>    
+    <button type="submit" name="posalji">Pošalji</button>
+</form>
